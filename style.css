@@ -1,0 +1,69 @@
+main{
+    margin: 0;
+}
+main, nav, header, article, section, footer{
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+.nagykep img, .kiskep img{
+    width: 100%;
+}
+
+.kiskep{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+}
+.kiskep .kep{
+    padding: 2px;
+    border: 1px solid grey;
+}
+
+nav{
+    background-color: rgb(153, 153, 153);
+    display: grid;
+    grid-template-columns: 70% auto;
+    gap: 10px;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+
+    display: grid;
+    grid-template-columns: auto auto;
+}
+nav a, nav a:visited, nav a:active{
+    color: rgb(160, 0, 0);
+    background-color: inherit;
+    padding: 1px 1px 1px 5px;
+    border-left: 1px solid grey;
+    transition: 0.5s;
+    text-decoration: none;
+}
+nav a:hover{
+    color: red;
+}
+
+nav #left a, nav #left a:visited, nav #left a:active{
+    color: #ccc;
+    background-color: rgb(160, 0, 0);
+    padding: 7.5px;
+    border-left: 1px solid grey;
+    transition: 0.5s;
+}
+nav #left a:hover{
+    color: red;
+}
+
+
+@media screen and (max-width:800px) {
+    .kiskep, nav ul, nav{
+        grid-template-columns: auto;
+    }
+    nav ul, nav ul li{
+        width: 100%;
+    }
+
+}
